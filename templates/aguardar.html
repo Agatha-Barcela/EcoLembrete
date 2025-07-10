@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Eco Lembrete - Aguardar</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="conteiner">
+    <h1 class="titulo">eco <strong>lembrete</strong></h1>
+    <p class="description">
+      inspiração para estar em constante evolução e consciente sobre pequenas mudanças de hábito que podemos fazer para tornar o mundo um lugar melhor.
+    </p>
+
+    <h2 class="subtitle">PRÓXIMO LEMBRETE EM:</h2>
+
+    <div class="entrada-caixa">
+      <h1 style="font-size: 36px; color: black;" id="contador" data-tempo="{{ tempo_restante }}">Carregando...</h1>
+    </div>
+
+    
+    <form action="/lembrete" method="post">
+      <button class="botao" type="submit">🔁 Gerar um lembrete aleatório</button>
+    </form>
+
+    
+    <div class="botoes-secundarios">
+      <a href="/formulario" class="botao-secundario">Voltar</a>
+      <a href="#" onclick="confirmarVoltarInicio()" class="botao-secundario">🏠 Início</a>
+    </div>
+  </div>
+
+  <script src="/static/contador.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Eco Lembrete - Formulário</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="conteiner">
+    <h1 class="titulo">eco <strong>lembrete</strong></h1>
+    <form action="/aguardar" method="post">
+      <div class="entrada-caixa">
+        <label>1 - Com que frequência deseja responder os lembretes?</label>
+        <input type="radio" name="frequencia" value="diario" required> Diário
+        <input type="radio" name="frequencia" value="semanal"> Semanal
+        <input type="radio" name="frequencia" value="mensal"> Mensal
+      </div>
+      <div class="entrada-caixa">
+        <label>2 - Qual horário deseja receber os lembretes?</label>
+        <input type="time" name="horario" required>
+      </div>
+      <div class="entrada-caixa">
+        <label>3 - Você trabalha/estuda?</label>
+        <input type="radio" name="ocupacao" value="sim" required> Sim
+        <input type="radio" name="ocupacao" value="nao"> Não
+      </div>
+      <a href="/" class="botao">Voltar</a>
+      <button class="botao" type="submit">Continuar</button>
+    </form>
+  </div>
+</body>
+</html>

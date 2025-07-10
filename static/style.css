@@ -1,0 +1,104 @@
+body {
+  margin: 0; /* Remove margem padrão do corpo da página */
+  font-family: 'Fredoka', sans-serif; /* Define a fonte padrão como Fredoka */
+  background: linear-gradient(to bottom, #f1f3e4 50%, #a7c28b 50%); /* Aplica um degradê vertical: metade clara e metade verde */
+  height: 100vh; /* Define a altura da página como 100% da altura da janela */
+  overflow: hidden; /* Impede rolagem da página */
+}
+
+.conteiner {
+  text-align: center; /* Centraliza o conteúdo dentro do container */
+  padding: 20px; /* Espaçamento interno de 20px */
+}
+
+.titulo {
+  font-size: 48px; /* Tamanho grande para o título */
+  font-weight: 700; /* Fonte em negrito */
+  color: #4a7221; /* Cor verde escura */
+  margin: 10px 0; /* Espaçamento acima e abaixo */
+}
+
+.subtitle {
+  font-size: 24px; /* Tamanho menor que o título */
+  font-weight: 700; /* Negrito */
+  color: #4a7221; /* Mesma cor do título */
+}
+
+.description {
+  font-size: 16px; /* Tamanho padrão de texto */
+  color: #4a7221; /* Cor verde escura */
+  margin: 20px 40px; /* Espaçamento superior/inferior 20px, laterais 40px */
+}
+
+.entrada-caixa {
+  background-color: #5b7f2c; /* Fundo verde médio */
+  width: 300px; /* Largura fixa */
+  margin: 30px auto; /* Espaço acima e centralizado na horizontal */
+  border-radius: 30px; /* Bordas arredondadas */
+  padding: 20px; /* Espaçamento interno */
+}
+
+.entrada-caixa label {
+  font-size: 18px; /* Tamanho de texto médio */
+  font-weight: bold; /* Negrito */
+  display: block; /* Ocupa uma linha inteira */
+  margin-bottom: 10px; /* Espaço abaixo do rótulo */
+  color: white; /* Cor branca */
+}
+
+.entrada-caixa input {
+  border: none; /* Remove bordas padrão */
+  border-bottom: 2px solid #333; /* Adiciona apenas uma borda inferior escura */
+  background: transparent; /* Fundo transparente */
+  width: 80%; /* Largura relativa ao elemento pai */
+  font-size: 16px; /* Tamanho do texto */
+  text-align: center; /* Centraliza o texto digitado */
+  outline: none; /* Remove borda ao focar no campo */
+  color: white; /* Texto branco */
+}
+
+.botao {
+  margin-top: 20px; /* Espaço acima do botão */
+  background-color: #4a7221; /* Fundo verde escuro */
+  color: white; /* Texto branco */
+  border: none; /* Remove bordas */
+  border-radius: 25px; /* Borda arredondada */
+  padding: 10px 30px; /* Espaço interno vertical/horizontal */
+  font-size: 18px; /* Tamanho do texto */
+  cursor: pointer; /* Mostra a mãozinha ao passar o mouse */
+  text-decoration: none; /* Remove sublinhado */
+}
+
+/* Estilos para botões principais e secundários */
+.botao,
+.botao-secundario {
+  background-color: #4a7221; /* Mesma cor de fundo */
+  color: white; /* Texto branco */
+  border: none;
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  min-width: 100px; /* Largura mínima */
+  text-align: center;
+  display: inline-block; /* Permite que fiquem lado a lado */
+  line-height: normal;
+}
+
+/* Efeito ao passar o mouse nos botões */
+.botao:hover,
+.botao-secundario:hover {
+  background-color: #3b5917; /* Cor mais escura no hover */
+}
+
+.botoes-secundarios form,
+.botoes-secundarios a {
+  display: inline-block; /* Permite que formulários e links fiquem alinhados lado a lado */
+}
+
+.botao,
+.botao-secundario {
+  min-width: 140px; /* Largura mínima um pouco maior */
+  text-align: center; /* Centraliza o texto dentro do botão */
+}

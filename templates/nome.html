@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Eco Lembrete - Nome</title>
+  <!-- Importa o CSS com os estilos da página -->
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <!-- Container principal para centralizar todo o conteúdo -->
+  <div class="conteiner">
+
+    <!-- Título principal da página -->
+    <h1 class="titulo">eco <strong>lembrete</strong></h1>
+
+    <!-- Texto de introdução sobre o propósito do projeto -->
+    <p class="description">
+      inspiração para estar em constante evolução e consciente sobre pequenas mudanças de hábito que podemos fazer para tornar o mundo um lugar melhor.
+    </p>
+
+    <!-- Formulário que pergunta o nome do usuário -->
+    <form action="/formulario" method="post">
+      
+      <!-- Caixa com campo de entrada do nome -->
+      <div class="entrada-caixa">
+        <label for="nome">Como deseja ser chamado?</label>
+        <input type="text" id="nome" name="nome" required>
+      </div>
+
+      <!-- Botão para continuar para o formulário -->
+      <button class="botao" type="submit">Continuar</button>
+    </form>
+  </div>
+</body>
+</html>

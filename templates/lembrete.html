@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Eco Lembrete - Mensagem</title>
+  <link rel="stylesheet" href="/static/style.css">
+  </style>
+</head>
+<body>
+  <div class="conteiner">
+    <h1 class="titulo">lembrete do dia</h1>
+    <h2 class="subtitle">{{ tema }}</h2>
+
+    <div class="entrada-caixa">
+      <h3 style="font-size: 20px;">🌍 <strong>{{ mensagem }}</strong> ♻️</h3>
+    </div>
+
+  
+    <div class="botoes-secundarios">
+      <form action="/aguardar" method="get">
+        <button class="botao" type="submit">🔁 Voltar</button>
+      </form>
+
+      <a href="#" onclick="confirmarVoltarInicio()" class="botao-secundario">🏠 Início</a>
+    </div>
+  </div>
+
+  </script>
+</body>
+</html>
