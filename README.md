@@ -36,8 +36,7 @@ Siga os passos abaixo para rodar o projeto no seu computador:
 ### 2. 📥 Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd nome-do-projeto
+[git clone https://github.com/seu-usuario/seu-repositorio.git](https://github.com/Agatha-Barcela/EcoLembrete)
 
 ---------------------------------------------------------------------------
 
