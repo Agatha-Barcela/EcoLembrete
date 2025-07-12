@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!-- Define o idioma da página como português do Brasil -->
+<head>
+  <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 (suporte a acentuação e símbolos) -->
+  <title>Eco Lembrete - Aguardar</title> <!-- Título que aparece na aba do navegador -->
+
+  <!-- Importa o arquivo CSS externo com os estilos da página -->
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<!-- Corpo da página com a classe que centraliza tudo verticalmente -->
+<body class="pagina-nome">
+
+  <!-- Container principal com todo o conteúdo visível -->
+  <div class="conteiner">
+
+    <!-- Título do projeto -->
+    <h1 class="titulo">
+      Eco<strong>Lembretes</strong>
+<!-- “eco” normal e “lembrete” em negrito -->
+    </h1>
+
+    <!-- Texto explicativo sobre o propósito do site -->
+    <p class="descricao">
+      Transformar o mundo começa com pequenos gestos diários.
+    </p>
+
+    <!-- Subtítulo indicando que há uma contagem regressiva -->
+    <h2 class="subtitulo">PRÓXIMO LEMBRETE EM:</h2>
+
+    <!-- Caixa com o contador de tempo -->
+    <div class="entrada-caixa">
+      <!-- Título que será substituído por um contador ao carregar a página -->
+      <h1 style="font-size: 36px; color: black;" id="contador" data-tempo="{{ tempo_restante }}">
+        Carregando...
+      </h1>
+      <!--
+        O atributo "data-tempo" recebe um valor vindo do backend (com o tempo restante em segundos).
+        Esse valor será lido pelo JavaScript para iniciar a contagem regressiva.
+      -->
+    </div>
+
+    <!-- Botão que envia o formulário para /lembrete e gera um novo lembrete aleatório -->
+ <form action="/lembrete-aleatorio" method="post">
+  <button class="botao" type="submit">
+    🔁 Gerar um lembrete aleatório
+  </button>
+</form>
+
+
+    <!-- Botões adicionais na parte inferior -->
+    <div class="botoes-secundarios">
+      <!-- Leva o usuário de volta para o formulário anterior -->
+      <a href="/formulario" class="botao-secundario">Voltar</a>
+
+      <!-- Botão que pergunta ao usuário se ele quer voltar para a tela inicial -->
+      <a href="#" onclick="confirmarVoltarInicio()" class="botao-secundario">
+        🏠 Início
+      </a>
+    </div>
+
+  </div> <!-- Fim do container -->
+
+  <!-- Importa o script JavaScript responsável pela contagem regressiva -->
+  <script src="/static/contador.js"></script>
+</body>
+</html>

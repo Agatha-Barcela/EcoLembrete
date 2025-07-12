@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!-- Define o idioma como português do Brasil -->
+<head>
+  <meta charset="UTF-8"> <!-- Suporte a acentuação e caracteres especiais -->
+  <title>Eco Lembrete - Aleatório</title> <!-- Título da aba do navegador -->
+
+  <!-- Importa o CSS externo com os estilos da página -->
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="pagina-nome"> <!-- Aplica estilo específico para essa página -->
+
+  <!-- Container principal para centralizar o conteúdo -->
+  <div class="conteiner">
+
+    <!-- Título principal da página -->
+    <h1 class="titulo">Eco<strong>Lembretes</strong></h1>
+
+    <!-- Subtítulo que mostra o tema do lembrete (será preenchido dinamicamente pelo backend) -->
+    <h2 class="subtitulo">{{ tema }}</h2>
+
+    <!-- Caixa com a mensagem do dia -->
+    <div class="entrada-caixa">
+      <h3 style="font-size: 20px;">🌍 <strong>{{ mensagem }}</strong> ♻️</h3>
+    </div>
+
+    <!-- Grupo de botões para ações do usuário -->
+    <div class="botoes-secundarios">
+
+
+      <!-- Botão para voltar à página de espera -->
+      <form action="/aguardar" method="get" style="display: inline;">
+        <button class="botao" type="submit">🔁 Voltar</button>
+      </form>
+
+      <!-- Botão que chama uma função para confirmar se o usuário quer voltar ao início -->
+      <a href="#" onclick="confirmarVoltarInicio()" class="botao">🏠 Início</a>
+    </div>
+
+  </div>
+
+  <!-- Script de confirmação -->
+  <script>
+    function confirmarVoltarInicio() {
+      const confirmar = confirm("Se você voltar agora, os dados preenchidos serão descartados. Deseja continuar?");
+      if (confirmar) {
+        window.location.href = "/";
+      }
+    }
+  </script>
+</body>
+</html>
